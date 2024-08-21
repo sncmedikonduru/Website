@@ -8,12 +8,18 @@ body {
 
 /* Header Styles */
 header {
-    background-color: #003366; /* FIU Blue */
+    background-color: #081E3F; /* Updated Dark Blue Color */
     color: white;
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+/* Align navigation items to the right */
+nav {
+    flex-grow: 1;
+    text-align: right;
 }
 
 .logo-container {
@@ -30,7 +36,7 @@ nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    display: flex;
+    display: inline-flex;
 }
 
 nav ul li {
@@ -60,7 +66,7 @@ main {
 }
 
 section h2 {
-    color: #003366;
+    color: #081E3F; /* Match Section Headers with the Dark Blue */
 }
 
 section p {
@@ -70,7 +76,7 @@ section p {
 
 /* Footer Styles */
 footer {
-    background-color: #003366;
+    background-color: #081E3F; /* Updated Dark Blue Color */
     color: white;
     text-align: center;
     padding: 10px 0;
