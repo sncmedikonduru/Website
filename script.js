@@ -1,21 +1,36 @@
 // script.js
 
-document.addEventListener("DOMContentLoaded", function() {
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('nav ul li a').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            // Check if it's an internal link
-            if (this.hash !== "") {
-                e.preventDefault();
+document.addEventListener('DOMContentLoaded', () => {
+    // Highlight the current page in the navigation menu
+    const currentLocation = location.href;
+    const menuItem = document.querySelectorAll('nav ul li a');
+    const menuLength = menuItem.length;
+    
+    for (let i = 0; i < menuLength; i++) {
+        if (menuItem[i].href === currentLocation) {
+            menuItem[i].className = 'active';
+        }
+    }
 
-                const targetId = this.getAttribute('href').substring(1);
-                const targetElement = document.getElementById(targetId);
+    // Scroll-to-top button functionality
+    const scrollToTopButton = document.createElement('button');
+    scrollToTopButton.textContent = '↑ Top';
+    scrollToTopButton.className = 'scroll-to-top';
+    document.body.appendChild(scrollToTopButton);
 
-                window.scrollTo({
-                    top: targetElement.offsetTop - 60, // Adjust for fixed header
-                    behavior: 'smooth'
-                });
-            }
+    scrollToTopButton.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
         });
+    });
+
+    // Show/hide the scroll-to-top button based on scroll position
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            scrollToTopButton.style.display = 'block';
+        } else {
+            scrollToTopButton.style.display = 'none';
+        }
     });
 });
