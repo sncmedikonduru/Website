@@ -1,25 +1,19 @@
 /* General Styles */
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
 }
 
-/* Header and Navigation */
+/* Header Styles */
 header {
-    background-color: #00274D;
-    color: #fff;
+    background-color: #003366; /* FIU Blue */
+    color: white;
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
 }
 
 .logo-container {
@@ -27,23 +21,16 @@ header {
     align-items: center;
 }
 
-.logo-container img {
-    height: 60px;
-    margin-right: 20px;
-}
-
-.logo-container h1 {
-    font-size: 24px;
-    font-weight: bold;
-    margin: 0;
+.logo {
+    height: 50px;
+    margin-right: 15px;
 }
 
 nav ul {
-    list-style: none;
-    padding: 0;
+    list-style-type: none;
     margin: 0;
+    padding: 0;
     display: flex;
-    align-items: center;
 }
 
 nav ul li {
@@ -51,89 +38,46 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: white;
     text-decoration: none;
     font-weight: bold;
-    padding: 5px 10px;
-    transition: background-color 0.3s ease;
 }
 
 nav ul li a:hover {
-    background-color: #004D99;
-    border-radius: 4px;
+    text-decoration: underline;
 }
 
-/* Banner Image */
-.banner {
-    width: 100%;
-    height: auto;
-    margin-top: 10px;
-}
-
+/* Banner Styles */
 .banner img {
     width: 100%;
     height: auto;
-    object-fit: cover;
+    display: block;
 }
 
-/* Content Sections */
+/* Main Content Styles */
 main {
     padding: 20px;
-    max-width: 1200px;
-    margin: 20px auto;
-}
-
-section {
-    margin-bottom: 40px;
 }
 
 section h2 {
-    color: #00274D;
-    margin-bottom: 20px;
-    font-size: 28px;
-    border-bottom: 2px solid #004D99;
-    padding-bottom: 10px;
+    color: #003366;
 }
 
 section p {
-    line-height: 1.8;
-    font-size: 18px;
+    font-size: 1.1em;
+    line-height: 1.6em;
 }
 
-ul {
-    padding-left: 20px;
-    list-style-type: disc;
-}
-
-ul li {
-    margin-bottom: 10px;
-}
-
-ul li a {
-    color: #004D99;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-ul li a:hover {
-    color: #00274D;
-}
-
-/* Footer */
+/* Footer Styles */
 footer {
-    background-color: #00274D;
-    color: #fff;
+    background-color: #003366;
+    color: white;
     text-align: center;
-    padding: 20px 0;
-    margin-top: 40px;
-    border-top: 4px solid #004D99;
+    padding: 10px 0;
+    margin-top: 20px;
 }
 
-footer p {
-    margin: 0;
-}
-
-/* Responsive Design */
+/* Responsive Styles */
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
@@ -147,5 +91,9 @@ footer p {
     .logo-container {
         flex-direction: column;
         text-align: center;
+    }
+
+    .logo {
+        margin-bottom: 10px;
     }
 }
