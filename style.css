@@ -5,6 +5,7 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
+    line-height: 1.6;
 }
 
 /* Header and Navigation */
@@ -16,6 +17,9 @@ header {
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .logo-container {
@@ -73,22 +77,46 @@ nav ul li a:hover {
 }
 
 /* Content Sections */
-section {
+main {
     padding: 20px;
+    max-width: 1200px;
     margin: 20px auto;
-    background-color: #fff;
-    border-radius: 8px;
-    max-width: 900px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-section h1, section h2 {
+section {
+    margin-bottom: 40px;
+}
+
+section h2 {
     color: #00274D;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    font-size: 28px;
+    border-bottom: 2px solid #004D99;
+    padding-bottom: 10px;
 }
 
 section p {
-    line-height: 1.6;
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+ul {
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+ul li a {
+    color: #004D99;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+ul li a:hover {
+    color: #00274D;
 }
 
 /* Footer */
