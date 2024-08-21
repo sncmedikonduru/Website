@@ -3,9 +3,11 @@ body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f4;
     color: #333;
 }
 
+/* Header and Navigation */
 header {
     background-color: #00274D;
     color: #fff;
@@ -57,6 +59,7 @@ nav ul li a:hover {
     border-radius: 4px;
 }
 
+/* Banner Image */
 .banner {
     width: 100%;
     height: auto;
@@ -69,19 +72,44 @@ nav ul li a:hover {
     object-fit: cover;
 }
 
+/* Content Sections */
+section {
+    padding: 20px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    max-width: 900px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+section h1, section h2 {
+    color: #00274D;
+    margin-bottom: 15px;
+}
+
+section p {
+    line-height: 1.6;
+}
+
 /* Footer */
 footer {
     background-color: #00274D;
     color: #fff;
     text-align: center;
     padding: 20px 0;
-    margin-top: 20px;
+    margin-top: 40px;
+    border-top: 4px solid #004D99;
+}
+
+footer p {
+    margin: 0;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
+        text-align: center;
     }
 
     nav ul li {
