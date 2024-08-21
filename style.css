@@ -3,17 +3,33 @@ body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
     color: #333;
 }
 
-/* Header and Navigation */
 header {
-    background-color: #004d99;
+    background-color: #00274D;
     color: #fff;
-    padding: 15px 0;
-    text-align: center;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    height: 60px;
+    margin-right: 20px;
+}
+
+.logo-container h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
 }
 
 nav ul {
@@ -21,7 +37,7 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: center;
+    align-items: center;
 }
 
 nav ul li {
@@ -31,66 +47,35 @@ nav ul li {
 nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 18px;
+    font-weight: bold;
     padding: 5px 10px;
     transition: background-color 0.3s ease;
 }
 
 nav ul li a:hover {
-    background-color: #006bb3;
-    border-radius: 5px;
+    background-color: #004D99;
+    border-radius: 4px;
 }
 
-/* Sections */
-section {
-    padding: 20px;
-    margin: 20px auto;
-    background-color: #fff;
-    border-radius: 8px;
-    max-width: 900px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.banner {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
 }
 
-section h1, section h2 {
-    color: #004d99;
-    margin-bottom: 15px;
-}
-
-section p {
-    line-height: 1.6;
+.banner img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 /* Footer */
 footer {
-    background-color: #004d99;
+    background-color: #00274D;
     color: #fff;
     text-align: center;
-    padding: 10px 0;
-    margin-top: 40px;
-    border-top: 4px solid #006bb3;
-}
-
-footer ul {
-    list-style: none;
-    padding: 0;
-    margin: 10px 0;
-    display: flex;
-    justify-content: center;
-}
-
-footer ul li {
-    margin: 0 10px;
-}
-
-footer ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s ease;
-}
-
-footer ul li a:hover {
-    color: #66b2ff;
+    padding: 20px 0;
+    margin-top: 20px;
 }
 
 /* Responsive Design */
@@ -98,10 +83,13 @@ footer ul li a:hover {
     nav ul {
         flex-direction: column;
     }
+
     nav ul li {
         margin: 10px 0;
     }
-    section {
-        margin: 10px 20px;
+
+    .logo-container {
+        flex-direction: column;
+        text-align: center;
     }
 }
