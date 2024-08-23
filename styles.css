@@ -9,6 +9,7 @@ html, body {
     flex-direction: column;
 }
 
+
 /* Header Styles */
 header {
     background-color: #081E3F; /* Updated Dark Blue Color */
@@ -62,6 +63,14 @@ nav ul li a:hover {
     height: auto;
     display: block;
 }
+.profile-pic {
+    width: 150px; /* Set the width of the image */
+    height: 200px; /* Set the height of the image */
+    object-fit: cover; /* Crop the image to fit within the dimensions */
+    border-radius: 10px; /* Slightly round the corners */
+    margin-right: 20px; /* Space between the image and adjacent text */
+}
+
 
 /* Main Content Styles */
 main {
