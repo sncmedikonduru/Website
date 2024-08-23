@@ -12,10 +12,46 @@ header {
     color: white;
     padding: 10px 20px;
     display: flex;
-    align-items: center; /* Removed justify-content: space-between */
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* Removed nav styles */
+/* Align navigation items to the right */
+nav {
+    flex-grow: 1;
+    text-align: right;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+    margin-right: 15px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
 
 /* Banner Styles */
 .banner img {
@@ -48,8 +84,8 @@ footer {
 .footer-container {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 0; /* Removed extra padding */
-    border-bottom: none; /* Removed the border */
+    padding-bottom: 20px;
+    border-bottom: 3px solid #003366;
 }
 
 .footer-column {
@@ -95,7 +131,7 @@ footer {
 
 .footer-bottom {
     text-align: center;
-    margin-top: 10px; /* Reduced margin */
+    margin-top: 20px;
 }
 
 .footer-bottom img {
@@ -109,7 +145,7 @@ footer {
 }
 
 .footer-bottom a {
-    color: #081E3F; /* Dark blue link */
+    color:  #081E3F; ; /* Dark blue link */
     text-decoration: none;
 }
 
@@ -117,14 +153,5 @@ footer {
     text-decoration: underline;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
-        text-align: center;
-    }
 
-    .footer-column {
-        margin: 20px 0;
-    }
 }
