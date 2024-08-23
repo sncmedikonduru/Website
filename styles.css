@@ -9,7 +9,6 @@ html, body {
     flex-direction: column;
 }
 
-
 /* Header Styles */
 header {
     background-color: #081E3F; /* Updated Dark Blue Color */
@@ -63,6 +62,8 @@ nav ul li a:hover {
     height: auto;
     display: block;
 }
+
+/* Profile Image Styles */
 .profile-pic {
     width: 150px; /* Set the width of the image */
     height: 200px; /* Set the height of the image */
@@ -71,6 +72,23 @@ nav ul li a:hover {
     margin-right: 20px; /* Space between the image and adjacent text */
 }
 
+/* Container for the profile image and content */
+.container {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px; /* Space between image and content */
+    margin-bottom: 20px; /* Space below the container */
+}
+
+/* Ensure the image does not take up too much space */
+.container .profile-pic {
+    flex-shrink: 0;
+}
+
+/* Ensure content takes up remaining space */
+.container .content {
+    flex-grow: 1;
+}
 
 /* Main Content Styles */
 main {
@@ -176,5 +194,18 @@ footer {
 
     .footer-column {
         margin: 20px 0;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container .profile-pic {
+        margin-bottom: 20px;
+    }
+
+    .container .content {
+        text-align: center;
     }
 }
